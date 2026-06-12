@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "color: #00c3ff; font-size: 16px; font-weight: bold; font-family: 'Outfit', sans-serif;"
     );
     console.log(
-        "%cSe você está inspecionando o código ou testando requisições, saiba que implementei validação client-side no formulário e regras de validação server-side (filtros de presença) diretamente na esteira de integração do Make.com para barrar payloads vazios. Fique à vontade para testar!",
+        "%cSe você está inspecionando o código ou testando requisições, saiba que implementei validação client-side no formulário e regras de validação server-side (filtros de presença) diretamente na esteira de integração do Make.com para barrar payloads vazios. Fique à vontade para testar! (Dica: tente digitar \"dev\" na página fora de campos de texto)",
         "color: #a0aec0; font-size: 12px; font-family: 'Inter', sans-serif;"
     );
 
@@ -315,6 +315,43 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
+
+    // Easter Egg: Modo Matrix ao digitar "dev" de forma não intrusiva
+    let keystrokes = "";
+    let keystrokeTimeout;
+
+    document.addEventListener("keydown", (e) => {
+        // Ignora se o foco estiver em inputs, textareas ou elementos editáveis
+        if (document.activeElement && 
+            (document.activeElement.tagName === "INPUT" || 
+             document.activeElement.tagName === "TEXTAREA" || 
+             document.activeElement.isContentEditable)) {
+            return;
+        }
+
+        // Captura apenas caracteres individuais legíveis
+        if (e.key.length === 1) {
+            clearTimeout(keystrokeTimeout);
+            keystrokes += e.key.toLowerCase();
+            keystrokes = keystrokes.slice(-3); // Guarda apenas as últimas 3 teclas
+
+            // Limpa o buffer de digitação após 1 segundo sem novas teclas
+            keystrokeTimeout = setTimeout(() => {
+                keystrokes = "";
+            }, 1000);
+
+            if (keystrokes === "dev") {
+                document.body.classList.toggle("matrix-mode");
+                const active = document.body.classList.contains("matrix-mode");
+                if (active) {
+                    console.log("%c💥 MODO MATRIX ATIVADO! Cores do sistema alteradas para verde neon.", "color: #00ff66; font-size: 14px; font-weight: bold;");
+                } else {
+                    console.log("%c🔄 MODO MATRIX DESATIVADO! Retornando ao tema original.", "color: #00c3ff; font-size: 14px; font-weight: bold;");
+                }
+                keystrokes = ""; // Reseta o buffer
+            }
+        }
+    });
 });
 
 // modal de detalhes do projeto
