@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mateus Emanuel | Portfólio de Engenharia & Tecnologia</title>
+    <meta name="description" content="Portfólio de desenvolvimento de software de Mateus Emanuel, destacando projetos práticos, análise crítica, acessibilidade e sólida base acadêmica.">
+    
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mateusemanuel.com.br/">
+    <meta property="og:title" content="Mateus Emanuel | Portfólio de Engenharia & Tecnologia">
+    <meta property="og:description" content="Portfólio de desenvolvimento de software de Mateus Emanuel, destacando projetos práticos, análise crítica, acessibilidade e sólida base acadêmica.">
+    <meta property="og:image" content="https://mateusemanuel.com.br/img/social-preview.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mateusemanuel.com.br/">
+    <meta property="twitter:title" content="Mateus Emanuel | Portfólio de Engenharia & Tecnologia">
+    <meta property="twitter:description" content="Portfólio de desenvolvimento de software de Mateus Emanuel, destacando projetos práticos, análise crítica, acessibilidade e sólida base acadêmica.">
+    <meta property="twitter:image" content="https://mateusemanuel.com.br/img/social-preview.png">
+
+    <link rel="icon" type="image/x-icon" href="img/neon.ico">
+    
+    <!-- Cloudflare Web Analytics --> 
+        <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "cf1fb445dc614ec088c52912f1a28da2"}'></script>
+    <!-- End Cloudflare Web Analytics -->
+
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Preloads para mitigar layout shift (CLS) -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" crossorigin>
+    <link rel="preload" href="css/style.css" as="style">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Acessibilidade -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- Background Animado Neon -->
+    <div class="bg-glow-container" aria-hidden="true">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="logo" role="img" aria-label="Logo Mateus Emanuel Desenvolvedor">
+            <span class="logo-symbol" aria-hidden="true">&lt;/&gt;</span>
+            <span class="logo-text">Mateus<span class="highlight">Emanuel</span></span>
+        </div>
+        <nav class="nav-links" aria-label="Navegação Principal">
+            <a href="#sobre" class="nav-item">Sobre</a>
+            <a href="#grade" class="nav-item">Competências</a>
+            <a href="#projetos" class="nav-item">Projetos</a>
+            <a href="#contato" class="nav-item btn-contact" aria-label="Ir para a seção de contato">Contato</a>
+        </nav>
+        <button class="mobile-menu-btn" aria-label="Abrir Menu de Navegação" aria-expanded="false" aria-controls="mobile-drawer">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+        <button class="close-drawer-btn" aria-label="Fechar Menu de Navegação">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+        <div class="mobile-nav-links">
+            <a href="#sobre" class="mobile-nav-item">Sobre</a>
+            <a href="#grade" class="mobile-nav-item">Competências</a>
+            <a href="#projetos" class="mobile-nav-item">Projetos</a>
+            <a href="#contato" class="mobile-nav-item">Contato</a>
+        </div>
+    </div>
+
+    <!-- Menu de Acessibilidade Flutuante (Widget) -->
+    <div class="accessibility-widget" role="region" aria-label="Controles de Acessibilidade">
+        <button class="accessibility-toggle-btn" aria-label="Abrir Menu de Acessibilidade" aria-expanded="false" aria-controls="accessibility-panel">
+            <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
+        </button>
+        <div id="accessibility-panel" class="accessibility-panel glass-card" aria-hidden="true">
+            <h3>Acessibilidade</h3>
+            <div class="acc-control-group">
+                <button id="btn-high-contrast" class="acc-btn" aria-label="Alternar modo de alto contraste">
+                    <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i> Alto Contraste
+                </button>
+                <button id="btn-dyslexia-font" class="acc-btn" aria-label="Alternar fonte para dislexia">
+                    <i class="fa-solid fa-font" aria-hidden="true"></i> Fonte Dislexia
+                </button>
+                <button id="btn-pause-animations" class="acc-btn" aria-label="Pausar animações e movimentos da página">
+                    <i class="fa-solid fa-circle-pause" aria-hidden="true"></i> Pausar Movimentos
+                </button>
+            </div>
+            <hr class="acc-divider" aria-hidden="true">
+            <div class="acc-font-size-controls">
+                <span class="acc-control-label">Tamanho do Texto:</span>
+                <div class="acc-font-buttons">
+                    <button id="btn-font-dec" class="acc-font-btn" aria-label="Diminuir tamanho do texto">A-</button>
+                    <button id="btn-font-reset" class="acc-font-btn" aria-label="Restaurar tamanho de texto padrão">A</button>
+                    <button id="btn-font-inc" class="acc-font-btn" aria-label="Aumentar tamanho do texto">A+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="sobre" class="hero-section" aria-label="Apresentação Pessoal">
+            <div class="hero-content">
+                <div class="badge" aria-label="Status profissional">Disponível para Oportunidades</div>
+                <h1 class="hero-title">
+                    Olá, me chamo <span class="gradient-text">Mateus Emanuel</span>,<br>
+                    é um prazer te receber no meu portfólio.
+                </h1>
+                <p class="hero-subtitle">
+                    Desenvolvo soluções de software alinhando engenharia robusta com os fundamentos práticos e teóricos da minha graduação. Meu objetivo é projetar sistemas de alta qualidade, seguros e eficientes, prontos para os desafios reais do mercado.
+                </p>
+                <div class="typewriter-container" aria-live="polite">
+                    <span class="typewriter-prefix">Especialidade: </span>
+                    <span id="typewriter-text" class="typewriter-text">Backend com Java & Spring Boot</span>
+                    <span class="cursor" aria-hidden="true">|</span>
+                </div>
+                <div class="hero-actions">
+                    <a href="#projetos" class="btn btn-primary" aria-label="Ir para a seção de projetos desenvolvidos">Ver Projetos</a>
+                    <a href="https://github.com/MateusEmanuell" target="_blank" class="btn btn-secondary" aria-label="Acessar o perfil de Mateus Emanuel no GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                </div>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+                <div class="tech-stack-wheel">
+                    <div class="wheel-core"><i class="fa-solid fa-code"></i></div>
+                    <div class="node node-java" title="Java"><i class="fa-brands fa-java"></i></div>
+                    <div class="node node-python" title="Python"><i class="fa-brands fa-python"></i></div>
+                    <div class="node node-database" title="Banco de Dados"><i class="fa-solid fa-database"></i></div>
+                    <div class="node node-cloud" title="Cloud Computing"><i class="fa-solid fa-cloud"></i></div>
+                    <div class="node node-android" title="Android"><i class="fa-brands fa-android"></i></div>
+                    <div class="node node-linux" title="Linux & Shell"><i class="fa-brands fa-linux"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grade Curricular Acadêmica / Habilidades -->
+        <section id="grade" class="section grade-section" aria-label="Competências da Grade Curricular">
+            <div class="section-header">
+                <span class="section-tag" aria-hidden="true">Fundamentação Acadêmica</span>
+                <h2 class="section-title">Grade Curricular Aplicada</h2>
+                <p class="section-desc">
+                    Toda a minha base técnica foi estruturada nas disciplinas essenciais da tecnologia da informação. Veja as competências aplicadas em meus projetos:
+                </p>
+            </div>
+
+            <div class="grade-grid">
+                <!-- Categoria 1 -->
+                <div class="grade-card" data-category="backend" role="region" aria-labelledby="cat-backend-title">
+                    <div class="card-icon" aria-hidden="true"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3 id="cat-backend-title">Arquitetura & Backend</h3>
+                    <ul class="subjects-list">
+                        <li>Programação Orientada a Objetos em Java</li>
+                        <li>Padrões de Projetos de Software com Java</li>
+                        <li>Estrutura de Dados</li>
+                        <li>Paradigmas de Linguagens de Programação em Python</li>
+                        <li>Desenvolvimento Rápido de Aplicações em Python</li>
+                        <li>Banco de Dados</li>
+                    </ul>
+                </div>
+
+                <!-- Categoria 2 -->
+                <div class="grade-card" data-category="frontend" role="region" aria-labelledby="cat-frontend-title">
+                    <div class="card-icon" aria-hidden="true"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3 id="cat-frontend-title">Web, Mobile & UX</h3>
+                    <ul class="subjects-list">
+                        <li>Desenvolvimento Web em HTML5, CSS, JS e PHP</li>
+                        <li>Programação para Dispositivos Móveis em Android</li>
+                        <li>Engenharia de Usabilidade</li>
+                        <li>Introdução à Programação de Computadores</li>
+                    </ul>
+                </div>
+
+                <!-- Categoria 3 -->
+                <div class="grade-card" data-category="infra" role="region" aria-labelledby="cat-infra-title">
+                    <div class="card-icon" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3 id="cat-infra-title">Infra, Cloud & Security</h3>
+                    <ul class="subjects-list">
+                        <li>Computação em Nuvem e Web Services em Linux</li>
+                        <li>Aplicações de Cloud, IoT e Indústria 4.0 em Python</li>
+                        <li>Segurança Cibernética</li>
+                        <li>Introdução à Segurança da Informação</li>
+                        <li>Fundamentos de Redes de Computadores</li>
+                        <li>Sistemas Operacionais</li>
+                        <li>Arquitetura de Computadores</li>
+                    </ul>
+                </div>
+
+                <!-- Categoria 4 -->
+                <div class="grade-card" data-category="processos" role="region" aria-labelledby="cat-processos-title">
+                    <div class="card-icon" aria-hidden="true"><i class="fa-solid fa-diagram-project"></i></div>
+                    <h3 id="cat-processos-title">Engenharia & Dados</h3>
+                    <ul class="subjects-list">
+                        <li>Tópicos de Big Data em Python</li>
+                        <li>Métodos Ágeis com Scrum</li>
+                        <li>Modelagem de Sistemas em UML</li>
+                        <li>Engenharia de Software</li>
+                        <li>Matemática e Lógica</li>
+                        <li>Pensamento Computacional</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projetos -->
+        <section id="projetos" class="section projects-section" aria-label="Projetos Desenvolvidos">
+            <div class="section-header">
+                <span class="section-tag" aria-hidden="true">Aplicações Práticas</span>
+                <h2 class="section-title">Meus Projetos de Engenharia</h2>
+                <p class="section-desc">
+                    Projetos completos com foco em boas práticas de mercado, análise crítica de desempenho e aplicação prática dos conceitos teóricos da graduação.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Projeto 1 -->
+                <article class="project-card" role="region" aria-labelledby="p1-title">
+                    <div class="project-image-placeholder" aria-hidden="true">
+                        <i class="fa-solid fa-cloud-sun-rain"></i>
+                        <span class="tech-tag">Python & IoT & Cloud</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 id="p1-title">1. API & Dashboard IoT de Telemetria</h3>
+                        <p class="project-text">
+                            Plataforma de ingestão de dados de sensores industriais, persistidos com escalabilidade e conteinerizados sob uma infraestrutura Linux em nuvem.
+                        </p>
+                        <div class="associated-subjects" aria-label="Disciplinas relacionadas">
+                            <span class="subject-badge">Cloud & Linux</span>
+                            <span class="subject-badge">IoT & Indústria 4.0</span>
+                            <span class="subject-badge">Banco de Dados</span>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-status" aria-label="Status do projeto"><i class="fa-solid fa-spinner fa-spin" style="color: var(--color-primary)" aria-hidden="true"></i> Em desenvolvimento</span>
+                            <button class="btn-card-details" onclick="openProjectDetails(1)" aria-label="Ver análise técnica do projeto de API e Dashboard IoT">Análise Técnica</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projeto 2 -->
+                <article class="project-card" role="region" aria-labelledby="p2-title">
+                    <div class="project-image-placeholder" aria-hidden="true">
+                        <i class="fa-solid fa-network-wired"></i>
+                        <span class="tech-tag">Java & Spring Boot & Postgres</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 id="p2-title">2. API REST de Agendamento Comercial</h3>
+                        <p class="project-text">
+                            API corporativa com algoritmos eficientes para reserva de horários livres, controle rígido de concorrência e aplicação de Padrões de Projeto (Design Patterns).
+                        </p>
+                        <div class="associated-subjects" aria-label="Disciplinas relacionadas">
+                            <span class="subject-badge">Java POO</span>
+                            <span class="subject-badge">Padrões de Projetos</span>
+                            <span class="subject-badge">UML & Estrutura de Dados</span>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-status" aria-label="Status do projeto"><i class="fa-regular fa-clock" style="color: var(--text-muted)" aria-hidden="true"></i> Não inicializado</span>
+                            <button class="btn-card-details" onclick="openProjectDetails(2)" aria-label="Ver análise técnica do projeto de API de Agendamento Comercial">Análise Técnica</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projeto 3 -->
+                <article class="project-card" role="region" aria-labelledby="p3-title">
+                    <div class="project-image-placeholder" aria-hidden="true">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <span class="tech-tag">Android & Room & UX</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 id="p3-title">3. App de Finanças Finas (Nativo)</h3>
+                        <p class="project-text">
+                            Aplicativo móvel focado em experiência do usuário (UX), persistência criptografada local de dados sensíveis e design alinhado às diretrizes do Material Design.
+                        </p>
+                        <div class="associated-subjects" aria-label="Disciplinas relacionadas">
+                            <span class="subject-badge">Android Nativo</span>
+                            <span class="subject-badge">Engenharia de Usabilidade</span>
+                            <span class="subject-badge">Segurança Cibernética</span>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-status" aria-label="Status do projeto"><i class="fa-regular fa-clock" style="color: var(--text-muted)" aria-hidden="true"></i> Não inicializado</span>
+                            <button class="btn-card-details" onclick="openProjectDetails(3)" aria-label="Ver análise técnica do projeto do App de Finanças Pessoais">Análise Técnica</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projeto 4 -->
+                <article class="project-card" role="region" aria-labelledby="p4-title">
+                    <div class="project-image-placeholder" aria-hidden="true">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <span class="tech-tag">Python & Streamlit & Pandas</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 id="p4-title">4. Big Data Dashboard de Indicadores</h3>
+                        <p class="project-text">
+                            Visualizador estatístico analítico para processamento de bases de dados massivas públicas, com modelagem matemática preditiva de tendências comerciais.
+                        </p>
+                        <div class="associated-subjects" aria-label="Disciplinas relacionadas">
+                            <span class="subject-badge">Big Data em Python</span>
+                            <span class="subject-badge">Linguagem Python</span>
+                            <span class="subject-badge">Matemática & Lógica</span>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-status" aria-label="Status do projeto"><i class="fa-regular fa-clock" style="color: var(--text-muted)" aria-hidden="true"></i> Não inicializado</span>
+                            <button class="btn-card-details" onclick="openProjectDetails(4)" aria-label="Ver análise técnica do projeto de Big Data Dashboard">Análise Técnica</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projeto 5 -->
+                <article class="project-card" role="region" aria-labelledby="p5-title">
+                    <div class="project-image-placeholder" aria-hidden="true">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span class="tech-tag">PHP & Javascript & SCRUM</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 id="p5-title">5. Portal Web Seguro de Gestão Acadêmica</h3>
+                        <p class="project-text">
+                            Aplicação web segura desenvolvida sob a óptica "Secure by Design", mitigando vulnerabilidades OWASP Top 10 e em conformidade técnica com a LGPD.
+                        </p>
+                        <div class="associated-subjects" aria-label="Disciplinas relacionadas">
+                            <span class="subject-badge">Desenvolvimento Web PHP/JS</span>
+                            <span class="subject-badge">Segurança da Informação</span>
+                            <span class="subject-badge">Métodos Ágeis (SCRUM)</span>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-status" aria-label="Status do projeto"><i class="fa-regular fa-clock" style="color: var(--text-muted)" aria-hidden="true"></i> Não inicializado</span>
+                            <button class="btn-card-details" onclick="openProjectDetails(5)" aria-label="Ver análise técnica do projeto do Portal Web Seguro">Análise Técnica</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contato" class="section contact-section" aria-label="Formulário e Links de Contato">
+            <div class="section-header">
+                <span class="section-tag" aria-hidden="true">Conecte-se comigo</span>
+                <h2 class="section-title">Vamos Construir Algo Juntos?</h2>
+                <p class="section-desc">
+                    Estou ativamente buscando oportunidades de desenvolvimento de software. Entre em contato ou acesse minhas redes!
+                </p>
+            </div>
+
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <h4>E-mail para Contato</h4>
+                            <p><a href="mailto:mateusemanuelcardoso@gmail.com" class="link-hover" aria-label="Enviar e-mail para mateusemanuelcardoso@gmail.com">mateusemanuelcardoso@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon" aria-hidden="true"><i class="fa-brands fa-linkedin-in"></i></div>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p><a href="https://www.linkedin.com/in/emanuelcardososilva/" target="_blank" class="link-hover" aria-label="Acessar o perfil de Mateus Emanuel no LinkedIn">linkedin.com/in/emanuelcardososilva</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon" aria-hidden="true"><i class="fa-brands fa-github"></i></div>
+                        <div>
+                            <h4>GitHub</h4>
+                            <p><a href="https://github.com/MateusEmanuell" target="_blank" class="link-hover" aria-label="Acessar o GitHub de Mateus Emanuel">github.com/MateusEmanuell</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form" aria-label="Formulário de contato">
+                    
+                    <div class="form-group">
+                        <label for="name">Seu Nome</label>
+                        <input type="text" id="name" name="name" required placeholder="Digite seu nome" aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Seu E-mail</label>
+                        <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com" aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="4" required placeholder="Escreva sua mensagem..." aria-required="true"></textarea>
+                    </div>
+                    
+                    <div class="form-buttons-group">
+                        <button type="submit" class="btn btn-primary" aria-label="Enviar mensagem de contato por e-mail">Enviar E-mail</button>
+                        <button type="button" id="btn-whatsapp" class="btn btn-secondary" style="border-color: #25d366; color: #25d366; background: rgba(37, 211, 102, 0.05);" aria-label="Enviar mensagem de contato pelo WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Mateus Emanuel. Todos os direitos reservados.</p>
+            <p>Portfólio Profissional &bull; Domínio: <span class="highlight">mateusemanuel.com.br</span></p>
+        </div>
+    </footer>
+
+    <!-- Modal para Detalhes dos Projetos -->
+    <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-title">
+        <div class="modal-content glass-card">
+            <button class="close-modal-btn" onclick="closeProjectModal()" aria-label="Fechar janela de detalhes do projeto">&times;</button>
+            <div id="modal-project-details">
+                <!-- Conteúdo preenchido dinamicamente via JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
