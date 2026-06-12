@@ -76,6 +76,16 @@ const projectsData = {
 
 document.addEventListener("DOMContentLoaded", () => {
     
+    // mensagem de boas-vindas para desenvolvedores no console
+    console.log(
+        "%c👋 Olá, Desenvolvedor ou Recrutador!", 
+        "color: #00c3ff; font-size: 16px; font-weight: bold; font-family: 'Outfit', sans-serif;"
+    );
+    console.log(
+        "%cSe você está inspecionando o código ou testando requisições, saiba que implementei validação client-side no formulário e regras de validação server-side (filtros de presença) diretamente na esteira de integração do Make.com para barrar payloads vazios. Fique à vontade para testar!",
+        "color: #a0aec0; font-size: 12px; font-family: 'Inter', sans-serif;"
+    );
+
     // navbar scroll effect
     const navbar = document.querySelector(".navbar");
     window.addEventListener("scroll", () => {
